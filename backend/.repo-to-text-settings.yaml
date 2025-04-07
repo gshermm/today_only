@@ -1,0 +1,5 @@
+gitignore-import-and-ignore: True
+ignore-tree-and-content:
+  - ".repo-to-text-settings.yaml"
+  - "./deals/migrations"
+  - "__pycache__"

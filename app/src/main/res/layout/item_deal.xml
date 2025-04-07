@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="@color/orange_light">
+
+        <!-- Top Section: Title and Favorite -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="true">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/deal_text"
+                android:includeFontPadding="false"/>
+
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_favorite_border"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/deal_text" />
+        </LinearLayout>
+
+        <!-- Restaurant Name and Rating -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="true"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/restaurantTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/deal_text"
+                android:includeFontPadding="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ★ "
+                android:textSize="14sp"
+                android:textColor="@color/deal_text"
+                android:layout_marginHorizontal="4dp"
+                android:includeFontPadding="false"/>
+
+            <TextView
+                android:id="@+id/ratingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/deal_text"
+                android:includeFontPadding="false"/>
+        </LinearLayout>
+
+        <!-- Bottom Section: Location and Time -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp"
+            android:baselineAligned="true">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:baselineAligned="true">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_location"
+                    android:alpha="0.77"
+                    app:tint="@color/deal_text"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/deal_text"
+                    android:alpha="0.77"
+                    android:includeFontPadding="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:baselineAligned="true">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_clock"
+                    app:tint="@color/deal_text"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"/>
+
+                <TextView
+                    android:id="@+id/timeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/deal_text"
+                    android:includeFontPadding="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

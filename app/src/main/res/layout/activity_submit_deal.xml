@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_cream"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/buttonBackToHomeInThanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:drawableLeft="@drawable/ic_back_arrow"
+        android:text="Back"
+        android:textColor="@color/deal_text"
+        android:textSize="12sp"
+        android:background="?android:attr/selectableItemBackground"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Submit a Deal"
+        android:textColor="@color/deal_text"
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <!-- Scrollable Form -->
+    <ScrollView
+        android:id="@+id/scrollViewSubmitContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Identity Selection -->
+            <TextView
+                android:fontFamily="@font/poppins_medium"
+                android:id="@+id/textViewIAmA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="I am a..."
+                android:textColor="@color/black" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBtns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_radio_btn"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="0dp"
+                    android:padding="8dp"
+                    android:text="Restaurant Owner"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    app:buttonTint="#FFFFFF" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_radio_btn"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="0dp"
+                    android:padding="8dp"
+                    android:text="UIUC Student"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    app:buttonTint="#FFFFFF" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_radio_btn"
+                    android:fontFamily="@font/poppins_medium"
+                    android:minHeight="0dp"
+                    android:padding="8dp"
+                    android:text="Other"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    app:buttonTint="#FFFFFF" />
+
+            </RadioGroup>
+
+            <!-- Personal Info -->
+            <LinearLayout
+                android:id="@+id/linearLayoutFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewFirstNameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="First name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:paddingTop="16dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLastName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewLastNameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Last name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- Deal Info -->
+
+            <LinearLayout
+                android:id="@+id/linearLayoutEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewEmailTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Email"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRestaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewRestaurantNameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Restaurant name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextRestaurantName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:paddingTop="16dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDealName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDealNameTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Deal name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextDealName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Date and Time -->
+            <LinearLayout
+                android:id="@+id/linearLayoutDealDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewDealDescTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Deal description"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextDealDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:includeFontPadding="false"
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewStartDateTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="8dp"
+                        android:text="Start date"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/editTextStartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_input_field"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="MM/DD/YYYY"
+                        android:includeFontPadding="false"
+                        android:inputType="date"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#80FFFFFF" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewRestaurantNameTitle5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="8dp"
+                        android:text="End date"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/editTextEndDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_input_field"
+                        android:fontFamily="@font/poppins_medium"
+                        android:hint="MM/DD/YYYY"
+                        android:includeFontPadding="false"
+                        android:inputType="date"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#7FFFFFFF" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Recurring -->
+            <LinearLayout
+                android:id="@+id/linearLayoutTimeWindow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTimeWindowTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingTop="8dp"
+                    android:text="Time window"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editTextTimeWindow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_input_field"
+                    android:fontFamily="@font/poppins_medium"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:padding="8dp"
+                    android:paddingTop="8dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutRecurring"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/textViewRecurring"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Recurring"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/recurringDropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Proof Upload -->
+            <LinearLayout
+                android:id="@+id/linearLayoutProof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/textViewProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Proof of Deal"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/buttonUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/orange"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Upload" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Submit Button -->
+    <LinearLayout
+        android:id="@+id/linearLayoutThankYou"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewThankYou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Thank You!"
+            android:textColor="#30537A"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewReviewPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#4D7AA5"
+            android:gravity="center"
+            android:padding="15dp"
+            android:singleLine="false"
+            android:text="We will update via email once this submission is reviewed"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/buttonBackToHomeInThanks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:includeFontPadding="false"
+            android:text="Back to Home"
+            app:iconPadding="0dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSubmitDeal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Submit Deal"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

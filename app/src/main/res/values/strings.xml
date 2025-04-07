@@ -1,0 +1,10 @@
+<resources>
+    <!-- Existing strings here -->
+    <string name="must_present_student_id">Must Present Student ID</string>
+    <string name="rate_this_deal">Rate This Deal</string>
+    <string name="share_deal">Share Deal</string>
+    <string name="close_button">Close</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="clock_icon">Clock Icon</string>
+    <string name="app_name">today_only</string>
+</resources>
